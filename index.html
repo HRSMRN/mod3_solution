@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Module 3 Solution</title>
+</head>
+
+<body>
+    <header>
+        <div id="header-container">
+            <h1>Food, LLC</h1>
+
+            <div class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="#chicken">Chicken</a></li>
+                            <li><a href="#beef">Beef</a></li>
+                            <li><a href="#sushi">Sushi</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="section-heading main">
+        <h1>Our Menu</h1>
+    </div>
+    <section class="section-container">
+
+        <section class="section-1">
+            <div class="section-heading" id="chicken">
+                <h2>Chicken</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates cumque repellat autem vel
+                minus
+                quaerat, dolorum accusantium totam maiores ipsum magnam ullam labore, architecto nemo molestiae eveniet
+                perspiciatis ea?
+                Dicta sint nesciunt fuga magni quam pariatur, labore eos quos ullam excepturi blanditiis nulla? Sequi
+                pariatur, eligendi blanditiis eaque consequuntur molestias doloremque quia quod soluta iure. Fugiat,
+                repellendus. Nisi, accusantium.
+                Nostrum perferendis qui eos deleniti consequuntur exercitationem non eum in ut dignissimos? Earum quasi
+                labore cum deserunt, itaque eveniet dolorum perspiciatis repellendus voluptates praesentium obcaecati ut
+                neque autem voluptatibus illo.
+                <span>(End&nbsp;of&nbsp;Chicken&nbsp;section&nbsp;<a
+                        href="#header-container">&nbsp;Back&nbsp;To&nbsp;Top&nbsp;</a>)</span>
+
+            </p>
+        </section>
+
+        <section class="section-2">
+            <div class="section-heading" id="beef">
+                <h2>Beef</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates cumque repellat autem vel
+                minus
+                quaerat, dolorum accusantium totam maiores ipsum magnam ullam labore, architecto nemo molestiae eveniet
+                perspiciatis ea?
+                Dicta sint nesciunt fuga magni quam pariatur, labore eos quos ullam excepturi blanditiis nulla? Sequi
+                pariatur, eligendi blanditiis eaque consequuntur molestias doloremque quia quod soluta iure. Fugiat,
+                repellendus. Nisi, accusantium.
+                Nostrum perferendis qui eos deleniti consequuntur exercitationem non eum in ut dignissimos? Earum quasi
+                labore cum deserunt, itaque eveniet dolorum perspiciatis repellendus voluptates praesentium obcaecati ut
+                neque autem voluptatibus illo.
+                <span>(End&nbsp;of&nbsp;Beef&nbsp;section&nbsp;<a
+                        href="#header-container">&nbsp;Back&nbsp;To&nbsp;Top&nbsp;</a>)</span>
+
+        </section>
+        <section class="section-3">
+            <div class="section-heading" id="sushi">
+                <h2>Sushi</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates cumque repellat autem vel
+                minus
+                quaerat, dolorum accusantium totam maiores ipsum magnam ullam labore, architecto nemo molestiae eveniet
+                perspiciatis ea?
+                Dicta sint nesciunt fuga magni quam pariatur, labore eos quos ullam excepturi blanditiis nulla? Sequi
+                pariatur, eligendi blanditiis eaque consequuntur molestias doloremque quia quod soluta iure. Fugiat,
+                repellendus. Nisi, accusantium.
+                Nostrum perferendis qui eos deleniti consequuntur exercitationem non eum in ut dignissimos? Earum quasi
+                labore cum deserunt, itaque eveniet dolorum perspiciatis repellendus voluptates praesentium obcaecati ut
+                neque autem voluptatibus illo.
+                <span>(End&nbsp;of&nbsp;Sushi&nbsp;section&nbsp;<a
+                        href="#header-container">&nbsp;Back&nbsp;To&nbsp;Top&nbsp;</a>)</span>
+
+
+        </section>
+    </section>
+
+
+    </div>
+</body>
+<script>
+    const icons = document.querySelectorAll(".nav-icon");
+    const menu = document.querySelector(".menu");
+    const sectionHeading = document.querySelector('.section-heading');
+
+    const toggleClass = function () {
+        this.classList.toggle("open");
+        if (this.classList[1] === "open") {
+            menu.classList.add("open")
+            sectionHeading.style.marginTop = "150px";
+
+        }
+
+        else {
+            menu.classList.remove("open");
+            sectionHeading.style.marginTop = "0px";
+        }
+
+    };
+
+    icons.forEach((icon) => {
+        icon.onclick = toggleClass;
+    });
+
+
+</script>
+
+</html>
